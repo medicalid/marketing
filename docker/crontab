@@ -1,0 +1,4 @@
+13 8 * * * root /opt/tweet.sh
+42 16 * * * root /opt/tweet.sh
+11 20 * * * root /opt/tweet.sh
+42 2 * * * root /opt/tweet.sh

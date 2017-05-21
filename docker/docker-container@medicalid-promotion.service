@@ -1,0 +1,14 @@
+[Unit]
+Description=Docker Container %I
+Requires=docker.service
+After=docker.service
+
+[Service]
+ExecStart=/usr/bin/docker run -v /data/medicalid/.yfiton/:/root/.yfiton/ --name %i %i
+ExecStopPost=/usr/bin/docker rm -f %i
+Restart=always
+User=medicalid
+
+[Install]
+WantedBy=default.target
+
